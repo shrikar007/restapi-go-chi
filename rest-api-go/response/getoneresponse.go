@@ -11,12 +11,14 @@ import (
 type GetOneStruct struct {
 	*structs.Expense
 }
-func (g *GetOneStruct) Render(w http.ResponseWriter, r *http.Request) error {
+
+func (GetOneStruct) Render(w http.ResponseWriter, r *http.Request) error {
 	return nil
 }
 
+
+
 func Getoneresponse(expense *structs.Expense) *GetOneStruct {
 	return &GetOneStruct{Expense: expense}
-
 
 }

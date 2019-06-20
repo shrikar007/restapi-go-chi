@@ -1,14 +1,16 @@
 package structs
 
-import "google.golang.org/genproto/googleapis/type/date"
+import (
+	"time"
+)
 
 type Expense struct {
 	Id          int       `json:"id"`
 	Description string    `json:"description"`
-	Type        string    `json:"type"`
+	Typeofaccount        string    `json:"typeofaccount"`
 	Amount      float64   `json:"amount"`
-	CreatedOn   date.Date `json:"created_on" `
-	UpdatedOn   date.Date `json:"updated_on"`
+	CreatedOn   time.Time `json:"created_on" `
+	UpdatedOn   time.Time `json:"updated_on"`
 }
 
 type Expenses []Expense

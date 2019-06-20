@@ -1,7 +1,9 @@
 package requests
 
 import (
+
 	"errors"
+
 	"github.com/shrikar007/rest-api-go/structs"
 	"net/http"
 )
@@ -17,9 +19,12 @@ func (c *CreateExpenseRequest) Bind(r *http.Request) error {
 		return errors.New("amount is either empty or invalid")
 	}
 
-	if c.Type == "" {
+	if c.Typeofaccount == "" {
 		return errors.New("type is either empty or invalid")
 	}
 
 	return nil
 }
+
+
+
